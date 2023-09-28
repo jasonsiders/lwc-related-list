@@ -1,0 +1,10 @@
+<template>
+	<div lwc:if={logs}>
+		<c-related-list-page
+			columns={columns}
+			object-api-name={objectApiName}
+			record-id={recordId}
+			records={logs}>
+		</c-related-list-page>
+	</div>
+</template>
