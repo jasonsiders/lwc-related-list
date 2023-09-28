@@ -3,10 +3,6 @@
 		{
 			"path": "force-app",
 			"default": true
-		},
-		{
-			"path": "example-app",
-			"default": false
 		}
 	],
 	"name": "lwc-text-related-list",
