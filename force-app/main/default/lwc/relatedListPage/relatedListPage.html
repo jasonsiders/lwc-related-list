@@ -1,0 +1,55 @@
+<!-- sldsValidatorIgnore -->
+<template>
+	<div
+		class="slds-page-header--object-home slds-page-header_joined slds-page-header slds-shrink-none test-headerRegion forceListViewManagerHeader"
+	>
+		<lightning-breadcrumbs>
+			<lightning-breadcrumb label={parentLabel} onclick={handleNavBack}> </lightning-breadcrumb>
+		</lightning-breadcrumbs>
+		<div class="slds-page-header__row">
+			<div class="slds-page-header__col-title">
+				<div class="slds-media">
+					<div class="slds-media__figure">
+						<c-sobject-icon color={iconColor} url={iconUrl}></c-sobject-icon>
+					</div>
+					<div class="slds-media__body">
+						<h1 class="slds-page-header__title listViewTitle slds-truncate">{title}</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slds-page-header__row slds-var-p-top_small">
+			<p class="slds-page-header__name-meta">{subtitle}</p>
+		</div>
+	</div>
+	<div class="slds-theme_default c-container">
+		<div lwc:if={isLoading}>
+			<lightning-spinner
+				alternative-text="Loading..."
+				class="c-spinner"
+				size="large"
+				variant="brand"
+			></lightning-spinner>
+		</div>
+		<div lwc:if={hasRows} style={tableStyle}>
+			<lightning-datatable
+				columns={columns}
+				column-widths-mode="fixed"
+				data={rows}
+				enable-infinite-loading={enableInfiniteLoading}
+				hide-checkbox-column
+				key-field={keyField}
+				onloadmore={handleLoadMore}
+				show-row-number-column
+				wrap-text-max-lines="3"
+			></lightning-datatable>
+		</div>
+		<div lwc:else class="slds-illustration slds-illustration_large slds-var-p-vertical_x-large" aria-hidden="true">
+			<img src={missingDataSrc} class="slds-illustration__svg" alt=""/>
+			<div class="slds-text-longform">
+				<h3 class="slds-text-heading_medium">{missingDataHeader}</h3>
+				<p class="slds-text-body_regular">{missingDataDetail}</p>
+			</div>
+		</div>
+	</div>
+</template>
