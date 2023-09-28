@@ -1,0 +1,20 @@
+{
+	"printWidth": 140,
+	"tabWidth": 4,
+	"trailingComma": "none",
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "**/lwc/**/*.html",
+			"options": {
+				"parser": "lwc"
+			}
+		},
+		{
+			"files": "*.{cmp,page,component}",
+			"options": {
+				"parser": "html"
+			}
+		}
+	]
+}
