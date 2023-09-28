@@ -3,6 +3,7 @@
 		{
 			"path": "force-app",
 			"default": true,
+			"definitionFile": "config/project-scratch-def.json",
 			"package": "lwc-related-list",
 			"versionName": "ver 0.1.0",
 			"versionNumber": "0.1.0.NEXT",
@@ -14,6 +15,7 @@
 	"sfdcLoginUrl": "https://login.salesforce.com",
 	"sourceApiVersion": "58.0",
 	"packageAliases": {
-		"lwc-related-list": "0HoDn0000010wBaKAI"
+		"lwc-related-list": "0HoDn0000010wBaKAI",
+		"lwc-related-list@0.1.0-1": "04tDn0000011NQzIAM"
 	}
 }
