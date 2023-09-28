@@ -1,6 +1,7 @@
 import { LightningElement, api, wire } from "lwc";
 import { NavigationMixin } from "lightning/navigation";
 import { getObjectInfo } from 'lightning/uiObjectInfoApi';
+import hasAccess from "@salesforce/apex/RelatedListController.hasAccess";
 const DEFAULT_MAX_ROWS = 6;
 const LWC_HOST_COMPONENT_NAME = "c__lwcHost";
 
@@ -16,6 +17,7 @@ export default class RelatedList extends NavigationMixin(LightningElement) {
 	 *  }
 	 **/
 	hasMore = false;
+	hasViewAccess = false;
 	iconColor;
 	iconUrl;
 	keyField = "Id";
@@ -82,6 +84,13 @@ export default class RelatedList extends NavigationMixin(LightningElement) {
         if (error) {
             console.error(`c-related-list: ${JSON.stringify(error)}`);
         }
+	}
+
+	@wire(hasAccess, { objectApiName: "$objectApiName" })
+	checkAccess({ data, error }) {
+		if (data) {
+			this.hasViewAccess = data;
+		}
 	}
 
 	handleViewAll(event) {
