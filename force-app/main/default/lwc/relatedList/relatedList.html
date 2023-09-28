@@ -1,0 +1,53 @@
+<!-- sldsValidatorIgnore -->
+<template>
+	<div
+		class="slds-box slds-box_xx-small slds-p-around_none"
+		style="border: 1px solid rgb(201, 201, 201)"
+	>
+		<article class="slds-card lightning-card">
+			<div
+				class="slds-card__header slds-grid slds-m-around_none slds-theme_shade"
+				style="border-bottom: 1px solid rgb(201, 201, 201)"
+			>
+				<header
+					class="slds-var-p-around_medium slds-m-around_none slds-media slds-media_center slds-has-flexi-truncate"
+				>
+					<div class="slds-media__figure">
+						<c-sobject-icon color={iconColor} url={iconUrl}></c-sobject-icon>
+					</div>
+					<div class="slds-media__body slds-text-link_reset">
+						<h2 class="slds-card__header-title" onclick={handleViewAll}>{header}</h2>
+					</div>
+				</header>
+			</div>
+			<div lwc:if={hasRecords}>
+				<div lwc:if={isLoading}>
+					<lightning-spinner
+						alternative-text="Loading..."
+						size="medium"
+						variant="brand">
+					</lightning-spinner>
+				</div>
+				<div>
+					<lightning-datatable
+						columns={columns}
+						column-widths-mode="fixed"
+						data={records}
+						hide-checkbox-column
+						key-field={keyField}
+						resize-column-disabled
+						show-row-number-column
+						wrap-text-max-lines="1"
+					></lightning-datatable>
+				</div>
+				<div>
+					<a onclick={handleViewAll}>
+						<footer class="slds-card__footer slds-m-top_none slds-var-p-vertical_small">
+							<span>View All</span>
+						</footer>
+					</a>
+				</div>
+			</div>
+		</article>
+	</div>
+</template>

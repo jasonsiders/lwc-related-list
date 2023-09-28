@@ -1,0 +1,16 @@
+<aura:component access="global" implements="lightning:isUrlAddressable">
+    <!-- 
+        LWCs have a couple of shortcomings specific to navigation:
+            - 1. They cannot be url-addressable
+            - 2. They cannot manipulate lightning console tabs via the workspaceApi
+        This component can be used to dynamically instantiate a LWC, 
+        and set the relevant console tab info (if in a lightning console).
+        Callers should use the lightning-navigation service to open this component,
+        and pass it a hashed version of their LWC in the c__cmp parameter.
+    -->
+    <aura:attribute name="hash" type="String" />
+    <aura:attribute name="content" type="Aura.Component" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:workspaceAPI aura:id="workspace" />
+    {!v.content}
+</aura:component>
