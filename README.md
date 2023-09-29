@@ -3,11 +3,11 @@ Related lists are a crucial part of the Salesforce UI, yet Salesforce doesn't al
 
 This framework offers many benefits, including:
 
-:sweat_smile: **Simplicity**: With just a few lines of code, developers can create custom related list components which closely resemble standard counterparts.
+- **Simplicity**: With just a few lines of code, developers can create custom related list components which closely resemble standard counterparts.
 
-:muscle: **Flexiblity**: At their core, related lists are just a highly stylized `lightning-datatable`. Developers can provide their own `columns` and `records` to support a wide variety of use cases. 
+- **Flexiblity**: At their core, related lists are just a highly stylized `lightning-datatable`. Developers can provide their own `columns` and `records` to support a wide variety of use cases. 
 
-:lock: **Security**: Related Lists automatically check for Object-level permissions. If the target Object is not accessibile by the current user, the list will not render - just like standard components. 
+=- **Security**: Related Lists automatically check for Object-level permissions. If the target Object is not accessibile by the current user, the list will not render - just like standard components. 
 
 ![Usage](media/example.gif)
 
