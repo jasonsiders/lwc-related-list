@@ -7,7 +7,7 @@ This framework offers many benefits, including:
 
 - **Flexiblity**: At their core, related lists are just a highly stylized `lightning-datatable`. Developers can provide their own `columns` and `records` to support a wide variety of use cases. 
 
-=- **Security**: Related Lists automatically check for Object-level permissions. If the target Object is not accessibile by the current user, the list will not render - just like standard components. 
+- **Security**: Related Lists automatically check for Object-level permissions. If the target Object is not accessibile by the current user, the list will not render - just like standard components. 
 
 ![Usage](media/example.gif)
 
