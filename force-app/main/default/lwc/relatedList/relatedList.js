@@ -91,7 +91,6 @@ export default class RelatedList extends NavigationMixin(LightningElement) {
 		if (data) {
 			this.hasViewAccess = data;
 		}
-		console.log(`@jason: hasAccess() to ${this.objectApiName} => ${this.hasViewAccess}`);
 	}
 
 	handleViewAll(event) {

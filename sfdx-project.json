@@ -5,8 +5,8 @@
 			"default": true,
 			"definitionFile": "config/project-scratch-def.json",
 			"package": "lwc-related-list",
-			"versionName": "ver 0.1.0",
-			"versionNumber": "0.1.0.NEXT",
+			"versionName": "ver 1.0.0",
+			"versionNumber": "1.0.0.NEXT",
 			"versionDescription": ""
 		}
 	],
@@ -16,6 +16,7 @@
 	"sourceApiVersion": "58.0",
 	"packageAliases": {
 		"lwc-related-list": "0HoDn0000010wBaKAI",
-		"lwc-related-list@0.1.0-1": "04tDn0000011NQzIAM"
+		"lwc-related-list@0.1.0-1": "04tDn0000011NQzIAM",
+		"lwc-related-list@1.0.0-1": "04tDn0000006wgVIAQ"
 	}
 }
